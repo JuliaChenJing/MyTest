@@ -1,3 +1,5 @@
+"use strict";
+
 var table_data = [{
     first_name: 'Rose',
     last_name: 'Tyler',
@@ -48,7 +50,7 @@ function buildHtmlTable(selector) {
         var row$ = $('<tr  class="success"/>');
         for (var colIndex = 0; colIndex < columns.length; colIndex++) {
             var cellValue = table_data[i][columns[colIndex]];
-            if (cellValue == null) cellValue = "";
+            if (cellValue == null||cellValue =="Unspecified") cellValue = "";
             row$.append($('<td/>').html(cellValue));
         }
         $(selector).append(row$);
