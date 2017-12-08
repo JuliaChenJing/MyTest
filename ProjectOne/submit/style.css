@@ -1,0 +1,7 @@
+ .ng-invalid {
+        background-color: pink;
+    }
+
+ .ng-valid {
+        background-color: lightgreen;
+    }
