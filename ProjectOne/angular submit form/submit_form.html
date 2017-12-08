@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Import Table</title>
+  <meta charset="utf-8" />
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+  <link rel="stylesheet" href="style.css" />
+  <script src="app.js"></script>
+
+  <!-- Bootstrap CSS -->
+  <!--  https://bootswatch.com/cerulean/#forms-->
+  <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/cerulean/bootstrap.min.css" rel="stylesheet" integrity="sha384-zF4BRsG/fLiTGfR9QL82DrilZxrwgY/+du4p/c7J72zZj+FLYq4zY00RylP9ZjiT"
+    crossorigin="anonymous">
+</head>
+
+
+
+
+<body>
+  <p>Try to change the names.</p>
+  <!--AngularJS modules define AngularJS applications.
+        AngularJS controllers control AngularJS applications.
+        The ng-app directive defines the application, the ng-controller directive defines the controller.-->
+  <div ng-app="myApp" ng-controller="myCtrl">
+    <form ng-submit="submitName()">
+      First Name:
+      <input type="text" ng-model="firstName" required=true>
+      <br> Last Name:
+      <input type="text" ng-model="lastName" required=true>
+      <input type="submit" value="Submit" />
+
+
+    </form>
+    <br> Name List:
+
+    <ul>
+      <li ng-repeat="x in names ">
+        {{ x.firstname }} {{ x.lastname }}
+      </li>
+    </ul>
+
+
+
+  </div>
+
+
+  <table class="table table-striped table-hover " id="excelDataTable" border="1">
+  </table>
+
+
+	<footer>
+      <p>Created by: Julia Chen</p>
+      <p>Contact information:
+        <a href="mailto:juliachenjing@gmail.com">
+          juliachenjing@gmail.com</a>.</p>
+    </footer>
+
+
+</body>
+
+</html>
