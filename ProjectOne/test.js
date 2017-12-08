@@ -1,4 +1,4 @@
-var myList = [{
+var table_data = [{
     first_name: 'Rose',
     last_name: 'Tyler',
     home: 'Earth'
@@ -38,17 +38,16 @@ var myList = [{
     last_name: 'Foreman',
     home: 'Gallifrey'
 }];
-
 console.log(table_data);
 
-// Builds the HTML Table out of myList.
+// Builds the HTML Table out of table_data.
 function buildHtmlTable(selector) {
-    var columns = addAllColumnHeaders(myList, selector);
+    var columns = addAllColumnHeaders(table_data, selector);
 
-    for (var i = 0; i < myList.length; i++) {
+    for (var i = 0; i < table_data.length; i++) {
         var row$ = $('<tr/>');
         for (var colIndex = 0; colIndex < columns.length; colIndex++) {
-            var cellValue = myList[i][columns[colIndex]];
+            var cellValue = table_data[i][columns[colIndex]];
             if (cellValue == null) cellValue = "";
             row$.append($('<td/>').html(cellValue));
         }
@@ -59,12 +58,12 @@ function buildHtmlTable(selector) {
 // Adds a header row to the table and returns the set of columns.
 // Need to do union of keys from all records as some records may not contain
 // all records.
-function addAllColumnHeaders(myList, selector) {
+function addAllColumnHeaders(table_data, selector) {
     var columnSet = [];
     var headerTr$ = $('<tr/>');
 
-    for (var i = 0; i < myList.length; i++) {
-        var rowHash = myList[i];
+    for (var i = 0; i < table_data.length; i++) {
+        var rowHash = table_data[i];
         for (var key in rowHash) {
             if ($.inArray(key, columnSet) == -1) {
                 columnSet.push(key);
