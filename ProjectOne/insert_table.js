@@ -45,7 +45,7 @@ function buildHtmlTable(selector) {
     var columns = addAllColumnHeaders(table_data, selector);
 
     for (var i = 0; i < table_data.length; i++) {
-        var row$ = $('<tr/>');
+        var row$ = $('<tr  class="success"/>');
         for (var colIndex = 0; colIndex < columns.length; colIndex++) {
             var cellValue = table_data[i][columns[colIndex]];
             if (cellValue == null) cellValue = "";
@@ -60,7 +60,7 @@ function buildHtmlTable(selector) {
 // all records.
 function addAllColumnHeaders(table_data, selector) {
     var columnSet = [];
-    var headerTr$ = $('<tr/>');
+    var headerTr$ = $('<tr class="info"/>');
 
     for (var i = 0; i < table_data.length; i++) {
         var rowHash = table_data[i];
