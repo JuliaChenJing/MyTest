@@ -1,7 +1,7 @@
 # MyTest
 
-
-# My Test
+juliachenjing@gmail.com
+515-343-0878
 
 ##  Project One	:
 
@@ -21,5 +21,4 @@
 * If you want to manipulate the data in problem2.db, download SQLite and follow the pattern in populate.sql.
 * MyNotes file is for my personal reference, you could ignore it.
 
-juliachenjing@gmail.com
-515-343-0878
+
