@@ -1,11 +1,14 @@
-#!/usr/bin/perl
+#!C:\xampp\perl\bin\perl.exe
+# The above line is perl execution path in xampp
+# The below line tells the browser, that this script will send html content.
+# If you miss this line then it will show "malformed header from script" error.
+#!"C:\xampp\perl\bin\perl.exe"
 require 5.003;
 #push(@INC,"/www/cgi-bin");
 push(@INC,"/home/httpd/cgi-bin");
 require 5.003;
 require "cgi-lib.pl";
  
-#https://www.math.upenn.edu/~kazdan/210/computer/html/web_script1.html
 #-------------------------- What This Does ----------------------------
 # Input data:  users first_name and age
 # Output:      age + 11
@@ -23,8 +26,8 @@ $Name = $in{first_name};
 $age = $in{age};
 $age=$age+11;
  
-
-<html><head><title>Perl Web Example 1</title></head>
+print <<"alice";        # Prints through the line with alice
+<html><head><title>Math 210, Perl Web Example 1</title></head>
  
 <body bgcolor=white>
 <center>
@@ -35,3 +38,4 @@ $age=$age+11;
 <P>
 I've got to go back to work now. Bye Bye.
 </body></html>
+alice                                 
